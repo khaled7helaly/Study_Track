@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: #0d0e18;
+  border: 1.5px solid #1e2030;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #1e2030;
+}
+
+.title {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: #4a4d6a;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+.close:hover { color: #fff; background: #1e2030; }
+
+.body {
+  padding: 20px;
+  overflow-y: auto;
+}

@@ -1,0 +1,72 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.bgGrid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgGlow {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(99,102,241,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.addTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed #1e2030;
+  border-radius: 14px;
+  background: transparent;
+  color: #4a4d6a;
+  font-size: 13px;
+  font-weight: 600;
+  min-height: 120px;
+  transition: all 0.2s;
+}
+.addTile:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+  background: rgba(99,102,241,0.04);
+}
+.addTileIcon {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .main { padding: 20px 16px 60px; }
+}
